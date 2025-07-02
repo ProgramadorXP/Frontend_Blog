@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 @theme {
     --breakpoint-xs: 480px;
 
   /* Palette Colors */
-  --color-foreground: #141414;
-  --color-border: #e3e8eb;
-  --color-background: #fdfdfd;
-  --color-primary: #2a4b7c;
-  --color-secondaryColor: #f1c84b;
+  --color-dark-base: #1E1E1E;    /* Fondo principal */
+  --color-accent-coral: #FF5A5F;    /* Acento vibrante (botones/CTA) */
+  --color-light-gray: #E0E0E0;    /* Texto principal */
+  --color-muted-gray: #7A7A7A;  /* Texto secundario */
+  --color-gold-accent: #D4AF37;     /* Acento secundario (hover/detalles) */
 }
 @plugin "daisyui";

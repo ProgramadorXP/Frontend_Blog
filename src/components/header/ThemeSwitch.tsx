@@ -1,6 +1,6 @@
 export default function ThemeSwitch() {
   return (
-    <label className="toggle text-base-content bg-border">
+    <label className="toggle">
       <input type="checkbox" value="synthwave" className="theme-controller" id="themeSwitch" />
 
       <svg
