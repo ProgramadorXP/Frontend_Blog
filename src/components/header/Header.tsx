@@ -44,8 +44,8 @@ export default function Header() {
         >
           {/* Puedes reemplazar este SVG por tu logo */}
 
-          <img src="iconGold.svg" alt="Logo" className="size-10" />
-          <h1 className="text-light-gray text-3xl">TypeOut</h1>
+          <img src="iconGold.svg" alt="Logo" className="size-8" />
+          <h1 className="text-light-gray text-2xl">TypeOut</h1>
         </Link>
 
         {/* Navbar - hidden in mobile */}
