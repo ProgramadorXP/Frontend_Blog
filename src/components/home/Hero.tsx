@@ -5,7 +5,7 @@ export default function Hero() {
       className="relative h-screen max-h-[768px] w-full overflow-hidden"
     >
       {/* Hero background */}
-      <div className="absolute inset-0 bg-cover bg-center bg-[url('/hero.jpg')]"></div>
+      <div className="absolute inset-0 bg-cover bg-center bg-[url('/hero_converted.webp')]"></div>
 
       {/* Overlay  */}
       <div className="absolute inset-0 bg-black/60"></div>
