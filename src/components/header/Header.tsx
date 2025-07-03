@@ -42,8 +42,7 @@ export default function Header() {
           to="/"
           className="flex items-center justify-center gap-2 font-bold text-xl text-text-primary"
         >
-          {/* Puedes reemplazar este SVG por tu logo */}
-
+          {/* Logo Icon */}
           <img src="iconGold.svg" alt="Logo" className="size-8" />
           <h1 className="text-light-gray text-2xl">TypeOut</h1>
         </Link>
