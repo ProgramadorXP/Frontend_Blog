@@ -2,6 +2,6 @@
 
 export default function BlogListView() {
   return (
-    <div>BlogListView</div>
+    <div className="min-h-lvh">BlogListView</div>
   )
 }

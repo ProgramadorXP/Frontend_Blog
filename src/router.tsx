@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import AppLayout from "./layouts/AppLayout";
 import HomeView from "./views/home/HomeView";
 import ProfileLayout from "./layouts/ProfileLayout";
@@ -12,6 +13,7 @@ import ContactView from "./views/contact/ContactView";
 export default function Router() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/" element={<HomeView />} index />
