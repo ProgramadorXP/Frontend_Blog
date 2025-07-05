@@ -59,7 +59,7 @@ export default function LatestPosts() {
       </h2>
       <div className="flex gap-8 flex-wrap justify-center">
         {mockPosts.map((post) => (
-          <div key={post.id} className="card bg-white w-96 shadow-md">
+          <div key={post.id} className="card bg-dark-base w-96 shadow-md">
             <figure>
               <img src={post.image} alt="Shoes" />
             </figure>
@@ -67,8 +67,8 @@ export default function LatestPosts() {
               <div className="badge badge-md bg-gold-accent text-dark-base">
                 {post.category}
               </div>
-              <h2 className="card-title text-dark-base">{post.title}</h2>
-              <p className="text-dark-base">{post.summary}</p>
+              <h2 className="card-title text-light-gray">{post.title}</h2>
+              <p className="text-light-gray">{post.summary}</p>
               <div className="card-actions justify-between items-center">
                 <div className="card-actions flex items-center text-muted-gray">
                   <div className="avatar">

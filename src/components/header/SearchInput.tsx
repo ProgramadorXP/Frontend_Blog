@@ -5,9 +5,9 @@ export default function SearchInput() {
         type="text"
         id="searchInput"
         placeholder="Buscar..."
-        className="w-full pl-10 pr-4 py-2 bg-border text-muted-gray rounded-none border-b border-transparent focus:border-b focus:border-gold-accent focus:text-light-gray focus:outline-none transition"
+        className="w-full pl-10 pr-4 py-2 bg-border text-light-gray rounded-none border-b border-transparent focus:border-b focus:border-gold-accent focus:text-light-gray focus:outline-none transition"
       />
-      <span className="absolute left-3 top-2.5 text-muted-gray">
+      <span className="absolute left-3 top-2.5 text-light-gray">
         {/* Search icon */}
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
           <circle cx="11" cy="11" r="8" />

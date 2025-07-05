@@ -5,11 +5,13 @@ import ThemeSwitch from "./ThemeSwitch";
 
 export default function Header() {
   const [visible, setVisible] = useState(true);
+  const [atTop, setAtTop] = useState(true);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
 
   const handleScroll = useCallback(() => {
     const currentY = window.scrollY;
+    setAtTop(currentY === 0);
     if (currentY > lastScrollY.current && currentY > 100) {
       setVisible(false); // scroll hacia abajo
     } else {
@@ -32,15 +34,20 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300
+    ${visible ? "translate-y-0" : "-translate-y-full"}
+        ${
+          atTop
+            ? "bg-transparent border-transparent"
+            : "bg-[rgba(30,30,30,0.95)] backdrop-blur-sm"
+        }
+  `}
     >
       <div className="container mx-auto px-4 py-3 flex flex-col gap-2 xs:flex-row xs:items-center xs:justify-between">
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center justify-center gap-2 font-bold text-xl text-text-primary"
+          className="flex items-center justify-center gap-2 font-bold text-xl"
         >
           {/* Logo Icon */}
           <img src="iconGold.svg" alt="Logo" className="size-8" />
@@ -55,7 +62,7 @@ export default function Header() {
               `font-bold transition-colors ${
                 isActive
                   ? "text-gold-accent"
-                  : "text-muted-gray  hover:text-gold-accent"
+                  : "text-light-gray hover:text-gold-accent"
               }`
             }
           >
@@ -67,7 +74,7 @@ export default function Header() {
               `font-bold transition-colors ${
                 isActive
                   ? "text-gold-accent"
-                  : "text-muted-gray hover:text-gold-accent"
+                  : "text-light-gray hover:text-gold-accent"
               }`
             }
           >
@@ -79,7 +86,7 @@ export default function Header() {
               `font-bold transition-colors ${
                 isActive
                   ? "text-gold-accent"
-                  : "text-muted-gray hover:text-gold-accent"
+                  : "text-light-gray hover:text-gold-accent"
               }`
             }
           >
@@ -91,7 +98,7 @@ export default function Header() {
               `font-bold transition-colors ${
                 isActive
                   ? "text-gold-accent"
-                  : "text-muted-gray hover:text-gold-accent"
+                  : "text-light-gray hover:text-gold-accent"
               }`
             }
           >
@@ -113,7 +120,7 @@ export default function Header() {
             `font-bold text-sm transition-colors ${
               isActive
                 ? "text-gold-accent"
-                : "text-muted-gray hover:text-gold-accent"
+                : "text-light-gray hover:text-gold-accent"
             }`
           }
         >
@@ -125,7 +132,7 @@ export default function Header() {
             `font-bold text-sm transition-colors ${
               isActive
                 ? "text-gold-accent"
-                : "text-muted-gray hover:text-gold-accent"
+                : "text-light-gray hover:text-gold-accent"
             }`
           }
         >
@@ -137,7 +144,7 @@ export default function Header() {
             `font-bold text-sm transition-colors ${
               isActive
                 ? "text-gold-accent"
-                : "text-muted-gray hover:text-gold-accent"
+                : "text-light-gray hover:text-gold-accent"
             }`
           }
         >
@@ -149,7 +156,7 @@ export default function Header() {
             `font-bold text-sm transition-colors ${
               isActive
                 ? "text-gold-accent"
-                : "text-muted-gray hover:text-gold-accent"
+                : "text-light-gray hover:text-gold-accent"
             }`
           }
         >

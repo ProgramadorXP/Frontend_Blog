@@ -14,13 +14,11 @@ export default function Hero() {
       <div className="relative z-10 flex items-center justify-center h-full">
         <div className="text-center px-4 max-w-xl mx-auto">
           <h2
-            className="font-bold text-gold-accent text-shadow-lg text-shadow-dark-base
-            text-2xl xs:text-3xl sm:text-4xl md:text-5xl leading-tight md:leading-tight lg:leading-tight
-            "
+            className="font-bold text-gold-accent text-2xl xs:text-3xl sm:text-4xl md:text-5xl"
           >
             Welcome to Typeout
           </h2>
-          <p className="mt-3 sm:mt-4 text-base xs:text-lg md:text-xl lg:text-2xl text-light-gray">
+          <p className="mt-3 xs:text-lg md:text-xl text-light-gray">
             Dive into stories, insights, and inspiration from the world of
             technology, coding, and creativity.
           </p>
